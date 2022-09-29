@@ -46,7 +46,7 @@
 BEGIN_NAMESPACE_QPOASES
 
 /** Default file to display messages. */
-FILE* stdFile = stdout;
+FILE* stdFile = NULL;
 
 
 
@@ -315,10 +315,10 @@ MessageHandling::MessageHandling( const MessageHandling& rhs )
  */
 MessageHandling::~MessageHandling( )
 {
-	#ifndef __SUPPRESSANYOUTPUT__
-	if ( ( outputFile != 0 ) && ( outputFile != stdout ) && ( outputFile != stderr ) )
-		fclose( outputFile );
- 	#endif /* __SUPPRESSANYOUTPUT__ */
+//	#ifndef __SUPPRESSANYOUTPUT__
+//	if ( ( outputFile != 0 ) && ( outputFile != stdout ) && ( outputFile != stderr ) )
+//		fclose( outputFile );
+// 	#endif /* __SUPPRESSANYOUTPUT__ */
 }
 
 

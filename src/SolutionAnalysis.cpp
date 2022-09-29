@@ -36,6 +36,7 @@
 
 #include <qpOASES/extras/SolutionAnalysis.hpp>
 
+#include <Rcpp.h>
 
 BEGIN_NAMESPACE_QPOASES
 
@@ -523,7 +524,8 @@ returnValue SolutionAnalysis::getVarianceCovariance(	SQProblem* const qp,
  */
 returnValue SolutionAnalysis::checkCurvatureOnStronglyActiveConstraints( SQProblem* qp )
 {
-  printf("checkCurvatureOnStronglyActiveConstraints( SQProblem* qp ) not yet implemented for standard qpOASES!\n");
+  // printf("checkCurvatureOnStronglyActiveConstraints( SQProblem* qp ) not yet implemented for standard qpOASES!\n");
+  Rcpp::Rcout << "checkCurvatureOnStronglyActiveConstraints( SQProblem* qp ) not yet implemented for standard qpOASES!\n";
   return RET_INERTIA_CORRECTION_FAILED;
 }
 

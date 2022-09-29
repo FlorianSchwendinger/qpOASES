@@ -41,8 +41,9 @@
   #include <sys/time.h>
 #endif
 
-#ifdef __MATLAB__
-  #include "mex.h"
+#ifdef __R__
+  #undef ERROR
+  #include <Rcpp.h>
 #endif
 
 #ifdef __SCILAB__

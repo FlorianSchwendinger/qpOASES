@@ -35,6 +35,7 @@
 #include <qpOASES/Matrices.hpp>
 #include <qpOASES/LapackBlasReplacement.hpp>
 
+#include <Rcpp.h>
 
 BEGIN_NAMESPACE_QPOASES
 
@@ -1685,7 +1686,8 @@ returnValue SparseMatrixRow::getSparseSubmatrix (
 				int_t rowoffset, int_t coloffset, int_t& numNonzeros,	int_t* irn,
 				int_t* jcn, real_t* avals, BooleanType only_lower_triangular /*= BT_FALSE */) const
 {
-	fprintf(stderr, "SparseMatrixRow::getSparseSubmatrix not implemented!\n");
+	// fprintf(stderr, "SparseMatrixRow::getSparseSubmatrix not implemented!\n");
+	Rcpp::stop("SparseMatrixRow::getSparseSubmatrix not implemented!\n"); 
 
 	return THROWERROR(RET_NOT_YET_IMPLEMENTED);
 }

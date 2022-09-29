@@ -39,13 +39,16 @@
 
 
 #ifndef __MATLAB__
-# include <cstdarg>
+#include <Rcpp.h>
+
+#include <cstdarg>
 void MyPrintf(const char* pformat, ... )
 {
   va_list ap;
   va_start(ap, pformat);
 
-  vfprintf(stdout, pformat, ap);
+  //vfprintf(stdout, pformat, ap);
+  Rcpp::Rcout << pformat << ap;
 
   va_end(ap);
 }
